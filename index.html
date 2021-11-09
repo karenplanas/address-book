@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Address Book</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css" type="text/css"/>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Space+Mono&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+    </header>
+    <section class="mainContent">
+        <h1>Address Book</h1>
+        <div class="menuOptionsAndDataContainer">
+            <div class = "menuOptions">
+                <nav>
+                    <a id = "contactsMenuOption">Contacts</a>
+                    <a id = "addContactMenuOption">Add</a>
+                    <a id = "searchMenuOption">Search</a>
+                    <a id = "aboutMenuOption">About</a>
+                </nav>
+            </div>
+            <div class="searchBar">
+                <input class="hide" id="searchInput" type="text" placeholder="Search contact..">
+            </div>
+            <div class="iconsImages">
+                <img src="img/person.svg">
+                <img src="img/phone.svg">
+                <img src="img/location.svg">
+            </div>
+            <h3 class="noContactFound hide">No contact have been found for the criteria provided.</h3>
+            <!-- contacts list -->
+            <ul class="hide" id="contactsList">
+            </ul>
+             <!-- About content -->
+             <ul class="about hide">
+                <li>Address Book is a simple app where you can:</li>
+                <li> - List Contacts</li>
+                <li> - Add Contacts</li>
+                <li> - Search Contacts</li>
+                <li> - and Delete Contacts</li>
+                <li>To access any option content click on it; to close it click on the option again.</li>
+                <li>Made by Karen Planas Pena in Montreal, Nov 2021.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!--Got "Modal" examples from W3schools.com documentation https://www.w3schools.com/howto/howto_css_modals.asp -->
+    <!-- The Modal -->
+    <div id="addContactModal" class="modal hide">
+    <!-- Modal content -->
+        <div class="modal-content">
+            <div class="close">&times;</div>
+            <form id="modalForm">
+                <div class="textField">
+                    <label for="firstNameInput">First Name:*</label> 
+                    <input id="firstNameInput" type="text" required>
+                </div>
+                <div class="textField">
+                    <label for="lastNameInput">Last Name:</label>
+                    <input id="lastNameInput" type="text">
+                </div>
+                <div class="textField">
+                    <label for="phoneNumberInput">Phone Number:*</label>
+                    <input id="phoneNumberInput" type="text" required>
+                </div>
+                <div class="textField">
+                    <label for="addrressInput">Address:</label>
+                    <input id="addrressInput" type="text">
+                </div>
+                <input type="submit" id="saveButtonModal" value="Save">
+            </form>
+            </div>
+    </div>
+
+    <footer>
+    </footer>  
+</body>  
+<script src="script.js"></script>
+
+</html>

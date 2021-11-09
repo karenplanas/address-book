@@ -1,0 +1,259 @@
+/*CSS variables > Got examples from https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties*/
+:root {
+    --text-font-family: 'Space Mono', monospace;
+    --h1-font-family: 'Rampart One', cursive;
+}
+
+body {
+    font-family: var(--text-font-family);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: var(--h1-font-family);
+    font-size: 64px;
+    margin-top: 130px;
+    margin-bottom: 50px;
+}
+
+nav a {
+    font-size: 24px;
+    margin: 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #444444;
+}
+
+.mainContent {
+    max-width: 900px;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+/* Contacts */
+.contactCard {
+    display: flex;
+    text-align: left;
+    margin: 24px;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.contactCard li{
+    margin: 8px;
+}
+
+/* Got "Modal" examples from W3schools.com documentation https://www.w3schools.com/howto/howto_css_modals.asp */
+/* The Modal (background) */
+.modal {
+    /* display: none; Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #fefefe;
+    margin: 14% auto; /* 14% from the top and centered */
+    padding: 40px 40px 25px 40px;
+    border: 1px solid #888;
+    border-radius: 16px;
+    width: 40%; 
+}
+
+.modal-content label{
+    font-size: 18px;
+
+}
+
+.modal-content input[type=text] {
+    float: center;
+    padding: 6px;
+    margin: 8px;
+    margin-left: 0;
+    margin-right: 72px;
+    border: 1px solid #888;
+    border-radius: 3.5px;
+    font-size: 18px;
+    font-family: var(--text-font-family);
+}
+
+input[type=submit] {
+    font-family: var(--text-font-family);
+    font-size: 16px;
+    margin-top : 24px;
+    padding: 6px;
+    width: 90px;
+}
+
+#saveButtonModal {
+    position: relative;
+    right: -10px;
+}
+
+form {
+    text-align: right;
+}
+
+/* The Modal Close Button "X" */
+.close {
+    color: #aaa;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    top: -20px;
+    right: -10px;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*Responsive design*/
+/*Got examples for https://www.w3schools.com/css/css_rwd_mediaqueries.asp*/
+/*Small devices*/
+@media only screen and (max-width: 768px) {
+    .modal-content {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        padding-left:10px;
+        padding-top: 100px;
+        border-radius: 0;
+    }
+    #saveButtonModal {
+        position: relative;
+        left: -40px;
+        bottom: -16px;
+    }
+    .close {
+        position: relative;
+        top: -20px;
+        left: -40px;
+    }
+}
+
+/*Medium-Large devices*/
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    .textField {
+        flex-direction: column;
+        display: flex;
+        text-align: initial;
+        padding-bottom: 20px;
+    }
+    .close {
+        position: relative;
+        top: -20px;
+        left: 0;
+    }
+}
+
+/*Delete button*/
+.deleteButton {
+    height: 40px;
+    width: 40px;
+    border: none;
+    background-color: white;
+}
+
+.deleteButton:hover{
+    cursor: pointer;
+}
+
+/*Got Tooltip example from : https://www.w3schools.com/css/css_tooltip.asp */
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+  /* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(240, 74, 74);
+    color: #fff;
+    font-family: var(--text-font-family);
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+   
+    /* Position the tooltip text*/
+    position: absolute;
+    left: 34px;
+    z-index: 1;
+}
+  
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/*Search*/
+.searchBar {
+    margin: 34px auto; 
+    width: 300px;
+}
+
+.searchBar input[type=text] {
+    padding: 6px;
+    border: 1px solid #888;
+    border-radius: 3.5px;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: var(--text-font-family);
+    width: 100%;
+}
+
+.noContactFound {
+    margin: 24px;
+    font-size: 17px;
+}
+
+/*About content*/
+.about {
+    margin-top: 30px;
+    margin-left: 24px;
+    text-align: left;
+    font-size: 17px;
+}
+
+.about li{
+    margin: 16px;
+}
+
+
+
+
+
+
+
